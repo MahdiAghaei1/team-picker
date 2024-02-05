@@ -22,6 +22,11 @@ function addTeamMember(_evt) {
     li.textContent = name;
     membersInput.value = "";
 
+    const removeButton = document.createElement("button");
+    li.addEventListener("click", () => {
+      li.remove();
+      removeButton.remove();
+    });
     membersList.appendChild(li);
   }
 }
